@@ -30,7 +30,7 @@ include('users-engine.php');
   <p><img src="<?php echo $rows['id_photo']; ?>" height="100px"></p>
 
   <!-- Trigger the modal with a button -->
-  <p><button type="button" class="btn btn-lg" data-toggle="modal" data-target="#myModal">Update Profile</button></p>
+  <p><button type="button" class="btn btn-lg" data-toggle="modal" data-target="#myModal">Update Profil</button></p>
 
 
   <!-- Modal -->
@@ -47,7 +47,7 @@ include('users-engine.php');
 
             <form method="POST">
                 <div class="form-group">
-                  <label for="full_name">Full Name:</label>
+                  <label for="full_name">Name:</label>
                   <input type="hidden" value="<?php echo $rows['users_id']; ?>" name="users_id">
                   <input type="text" class="form-control" id="full_name" value="<?php echo $rows['full_name']; ?>" name="full_name">
                 </div>

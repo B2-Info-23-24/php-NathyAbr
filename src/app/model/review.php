@@ -28,7 +28,7 @@ if(!empty($query)){
 <div class="container">
 <div class="alert">
   <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
-  <strong>Your review has been recorded.</strong>
+  <strong>Votre avis à bien été pris en compte.</strong>
 </div></div>
 <?php
 }
