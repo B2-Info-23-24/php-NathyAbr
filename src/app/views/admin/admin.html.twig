@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Admin - Troc Mon Toit</title>
+ 
+</head>
+<body>
+
+<h1>Dashboard Admin</h1>
+
+<h2>Liste des Logements</h2>
+<table border="1">
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Nom</th>
+        <th>Ville</th>
+        <th>Type</th>
+        <th>Prix par Nuit</th>
+     
+    </tr>
+    </thead>
+    <tbody>
+    {% for logement in logements %}
+        <tr>
+            <td>{{ logement.id }}</td>
+            <td>{{ logement.nom }}</td>
+            <td>{{ logement.ville }}</td>
+            <td>{{ logement.type_logement }}</td>
+            <td>{{ logement.prix_nuit }}</td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+<h2>Liste des Utilisateurs</h2>
+<table border="1">
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Nom</th>
+        <th>Prénom</th>
+        <th>Email</th>
+        <!-- Ajoutez d'autres en-têtes selon vos besoins -->
+    </tr>
+    </thead>
+    <tbody>
+    {% for utilisateur in utilisateurs %}
+        <tr>
+            <td>{{ utilisateur.id }}</td>
+            <td>{{ utilisateur.nom }}</td>
+            <td>{{ utilisateur.prenom }}</td>
+            <td>{{ utilisateur.email }}</td>
+            <!-- Ajoutez d'autres colonnes selon vos besoins -->
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+
+<!-- Section Réservations -->
+<h2>Liste des Réservations</h2>
+<table border="1">
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>ID Utilisateur</th>
+        <th>ID Logement</th>
+        <th>Date Début</th>
+        <th>Date Fin</th>
+        <th>Prix Total</th>
+        <!-- Ajoutez d'autres en-têtes selon vos besoins -->
+    </tr>
+    </thead>
+    <tbody>
+    {% for reservation in reservations %}
+        <tr>
+            <td>{{ reservation.id }}</td>
+            <td>{{ reservation.id_utilisateur }}</td>
+            <td>{{ reservation.id_logement }}</td>
+            <td>{{ reservation.date_debut }}</td>
+            <td>{{ reservation.date_fin }}</td>
+            <td>{{ reservation.prix_total }}</td>
+            <!-- Ajoutez d'autres colonnes selon vos besoins -->
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+
+
+</body>
+</html>

@@ -1,1 +1,6 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/YbKxHPdJ)
+Rien ne fonctionne, il n'y a que des erreurs de partout et rien ne se lance. Désolée pour le read me catastrophique.
+
+Utilisation de docker : docker compose -up
+Tentative de mise en place d'un routeur
+Mise en place d'une database
+

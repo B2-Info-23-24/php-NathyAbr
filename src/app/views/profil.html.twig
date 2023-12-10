@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ logement.nom }} - Troc Mon Toit</title>
+    <!-- Vous pouvez inclure ici vos liens vers les styles CSS -->
+</head>
+<body>
+
+<h1>{{ logement.nom }}</h1>
+
+<p>Ville: {{ logement.ville }}</p>
+<p>Type de Logement: {{ logement.type_logement }}</p>
+<p>Prix par Nuit: ${{ logement.prix_nuit }}</p>
+
+<h2>Équipements Disponibles</h2>
+{% if logement.equipements|length > 0 %}
+    <ul>
+        {% for equipement in logement.equipements %}
+            <li>{{ equipement.nom }}</li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p>Aucun équipement disponible.</p>
+{% endif %}
+
+<h2>Services Disponibles</h2>
+{% if logement.services|length > 0 %}
+    <ul>
+        {% for service in logement.services %}
+            <li>{{ service.nom }}</li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p>Aucun service disponible.</p>
+{% endif %}
+
+<!-- Ajoutez ici d'autres sections pour gérer les disponibilités, les réservations, les commentaires, etc. -->
+
+</body>
+</html>

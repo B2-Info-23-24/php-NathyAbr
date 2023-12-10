@@ -1,0 +1,26 @@
+version: '3'
+
+services:
+  web:
+    build: .
+    ports:
+      - "8080:80" # Expose port 8080 
+    volumes:
+      - ./src/:/var/www/html
+
+
+  mysql:
+    image: mysql:latest
+    platform: linux/x86_64
+    environment:
+      MYSQL_ROOT_PASSWORD: root_pwd
+      MYSQL_DATABASE: n_database
+      MYSQL_USER: n_user
+      MYSQL_PASSWORD: n_pwd
+    volumes:
+      - db_data:/var/lib/mysql
+    ports:
+      - "3306:3306" # Expose port 3306 on the host to port 3306 in the container
+
+volumes:
+  db_data:
